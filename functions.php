@@ -14,6 +14,8 @@ function my_theme_enqueue_styles() {
     );
 }
 
+// Personnalisation du back office : Ajout d'une colonne pour l'image à la une
+
 // This action hook allows to add a new empty column
 add_filter( 'manage_toile_posts_columns', 'rudr_featured_image_column' );
 function rudr_featured_image_column( $cols ) {
@@ -46,6 +48,7 @@ function rudr_render_the_column( $column_name, $post_id ) {
 	}
 }
 
+// Mise en place de style CSS pour le backoffice
 add_action('admin_head', 'my_custom_css2backOffice');
 
 function my_custom_css2backOffice() {
@@ -66,16 +69,11 @@ function my_custom_css2backOffice() {
   </style>';
 }
 
-/** Adds script to header 
- ** Scroll to top of page only on pager facet interaction
- ** For more info see:
- ** https://facetwp.com/help-center/facets/facet-types/pager/#how-to-add-pagination-scrolling
- **/
 
+// Ajout de scripts dans le header
 add_action( 'wp_head', function() { ?>
 
-    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
-
+    <!-- Facet WP -->
     <script>
         (function($) {
             $(document).on('facetwp-refresh', function() {
@@ -108,7 +106,6 @@ add_action( 'wp_head', function() { ?>
     })();
     </script>
     <!-- End Matomo Code -->
-
 
 <?php } );
 
