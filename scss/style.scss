@@ -1,0 +1,243 @@
+/*!
+ Theme Name:   Paul COUPILLE
+ Theme URI:    
+ Description:  
+ Author:       contigo!
+ Author URI:   
+ Template:     twentytwenty
+ Version:      1.1.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentytwentychild
+
+*/
+
+
+
+/* color */
+$col_white: #F2F2F2;
+$col_real_white:#FFF;
+$col_black: #222222;
+$col_gray: #888888;
+$col_gray_light: #d1d1d1;
+
+/* Personnalisation du thème parent */
+
+body,html{
+  background-color: $col_white ;
+}
+
+
+.home {
+  .site-title a{
+    color: $col_white !important;
+  }
+  .header-navigation-wrapper{
+    color:$col_white;
+      a{
+          color: $col_white  !important;
+      }
+    }
+}
+.privacy-policy {
+  margin: 0;
+}
+
+
+body, #site-header, .footer-nav-widgets-wrapper, #site-footer, .menu-modal, .menu-modal-inner, .search-modal-inner, .archive-header, .singular .entry-header, .singular .featured-media::before, .wp-block-pullquote::before{
+  background-color: transparent ;
+}
+
+body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover, .color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus)::first-letter, .wp-block-button.is-style-outline, a {
+    color: $col_black !important;
+}
+
+h1, .heading-size-1 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: $col_black ;
+  }
+
+h1.entry-title, h2.entry-title {
+    margin: 0 0 4rem 0;
+    color: $col_black ;
+  }
+  h2, .heading-size-2{
+    font-size: 2.8rem;
+    color: $col_black ;
+  }
+  h3,h4,p{
+    color: $col_black ;
+  }
+
+.header-inner,.section-inner{
+max-width: 100%;
+}
+
+/* Menu */
+.primary-menu{
+  li{
+    a{
+      padding: 5px 10px;
+    }
+  }
+  li.catalogue a{
+    border:solid 1px $col_black;
+    text-decoration: none;
+
+    &:hover{
+      background-color: $col_black;
+      color:$col_white !important;
+      text-decoration: none;
+    }
+    .home & {
+      border:solid 1px $col_white;
+    }
+  }
+  li.catalogue.current_page_item a{
+    background-color: $col_black;
+    color:$col_white !important;
+    text-decoration: none;
+  }
+}
+
+/* Entry content */
+#site-content{
+    min-height: calc(100vh - 200px);
+    // padding-top: 50px;
+}
+p,.entry-content,.gform_description,label,legend {
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 21px;
+}
+
+.entry-content{
+  .home &{
+    min-height: 100vh;
+  }
+}
+
+body:not(.overlay-header) .toggle-inner .toggle-text{
+  display: none;        
+}
+
+/* SINGLE TOILE */
+.single-toile{
+  #site-content{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    article{
+      .entry-content{
+        table{
+          float: left;
+        }
+      }
+    }
+
+
+
+  }
+}
+.singular .featured-media-inner {
+  left: 0;
+}
+
+
+/* TIME LINE */
+
+.wp-block-tlgb-b-timeline-block .timeline__content {
+  label{
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+  }
+  p{
+    font-size: 16px;
+  }
+}
+
+
+/* GALLERY */
+.wp-block-gallery:first-child{
+  margin-top: 0 !important;
+}
+
+
+/* FOOTER */
+.footer-nav-widgets-wrapper{
+  background-color: gainsboro ;
+}
+
+#site-footer{
+  border-top:1px solid $col_black ;
+  padding: 1rem 0 1rem 0;
+  margin-top: 20rem;
+}
+
+#site-footer .section-inner .footer-credits{
+  margin-bottom: auto;
+}
+.footer-menu-nav{
+  padding: 0;
+  margin: 0;
+
+  .widget {
+    ol,ul {
+      list-style: none;
+      margin:0
+    }
+    li {
+      display:block;
+      width:fit-content;
+      float:left;
+      margin:0 20px 0 0;
+    }
+    a {
+      display:block;
+      font-size: 1.8rem;
+    }
+    li:first-child a{
+      font-weight: 700
+    }
+
+  }
+}
+
+.footer-top-visible .footer-nav-widgets-wrapper{
+  margin-top:0;
+  border:none;
+  
+}
+
+.header-footer-group{
+  .footer-inner{
+
+    // border-top:1px solid black;
+
+
+    .gform_wrapper{
+      .gform_heading{
+        margin-bottom: 5rem;
+
+        h2{
+          font-size: 3.2rem;
+        }
+        span.gform_description{
+          font-size: 16px;
+          
+        }
+      }
+    }
+
+  }
+  
+}
+
+
+
+@import 'facet.scss';
+@import 'form.scss';
+@import 'responsive.scss';

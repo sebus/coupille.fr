@@ -1,0 +1,59 @@
+/* Un peu de responsive pour les grilles */
+@media (max-width: 1280px){
+    .fwpl-layout.el-xqzw08 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-gap: 15px !important;
+    }
+    .page-id-71{
+      .facet_grid{
+        gap: 2rem;
+      }
+      .critere{
+        flex-basis:25% !important;
+      }
+      .vue{
+        flex-basis:75% !important;
+      }
+    }
+    #site-header{
+        button{
+            background-color: $col_white !important;
+            color: $col_black !important;
+        }
+    }
+    .menu-wrapper.section-inner{
+        width: 100vw;
+    }
+    button.close-nav-toggle{
+        padding: 3.1rem 1rem;
+    }
+  }
+  
+  @media (min-width: 700px){
+    .singular .entry-header {
+      padding: 6rem 0 0 0;
+    }
+    
+    .footer-widgets-outer-wrapper {
+        padding: 2rem 0;
+    }
+  }
+  
+  @media (min-width: 1220px){
+      h1, .heading-size-1 {
+      font-size: 5.4rem;
+      }
+      .footer-widgets-outer-wrapper{
+        max-width: 50vw;
+      }
+  }
+  
+  @media (min-width: 1000px){
+      .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
+      margin-bottom: 4rem;
+      margin-top: 4rem;
+      }
+  }
+
+
+  /**/

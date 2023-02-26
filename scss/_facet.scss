@@ -1,0 +1,35 @@
+/* Les critères */
+.critere{
+
+    padding: 15px;
+    font-size: 16px;
+
+    p{
+      font-weight: 700;
+      //border-top: 1px solid $col_gray;
+      border-bottom: none;
+      padding-top: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .facetwp-facet {
+      margin-bottom: 20px;
+      padding: 0;
+    
+    
+    }
+    .facetwp-hidden,
+    .facetwp-autocomplete-update{
+      display: none !important;
+    }
+  
+  }
+  
+  /* Pagination */
+  .pager{
+    padding: 0 !important;
+  
+    .facetwp-facet{
+      padding: 10px 20px;
+    }
+  }
