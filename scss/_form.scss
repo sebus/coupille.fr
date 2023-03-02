@@ -5,8 +5,8 @@
   color: $col_white ;
 }
 
-
-input[type="date"], input[type="email"], input[type="password"], input[type="search"], input[type="text"], input[type="url"], textarea {
+.gform_wrapper{
+  input[type="date"], input[type="email"], input[type="password"], input[type="search"], input[type="text"], input[type="url"], textarea {
     background-color: $col_real_white;
     border-radius: .5rem;
     border: 1px solid $col_gray_light;
@@ -15,33 +15,33 @@ input[type="date"], input[type="email"], input[type="password"], input[type="sea
     padding: .825rem 1.25rem !important;
   }
 
-// Header
-.gform_heading {
-border: 1px solid $col_gray_light;
-width: fit-content;
-padding: 0;
-background-color: $col_white;
-border-radius: 26px;
-padding:5px 10px;
-margin: 0 auto 40px auto;
+  // Header
+  .gform_heading {
+  border: 1px solid $col_gray_light;
+  width: fit-content;
+  padding: 0;
+  background-color: $col_white;
+  border-radius: 26px;
+  padding:5px 10px;
+  margin: 0 auto 40px auto;
 
     p{
         margin:0;
         color: $col_black;
         font-size: 14px;
     }
-}
+  }
 
-// Content
-.entry-content{
+  // Content
+  .entry-content{
     .gform_wrapper.gravity-theme .gfield_label{
         font-weight: normal;
         font-size: 21px;
       }
-} 
+  } 
 
-// Consentement
-.ginput_container_consent{
+  // Consentement
+  .ginput_container_consent{
 
     display: flex;
 
@@ -58,10 +58,10 @@ margin: 0 auto 40px auto;
     .gfield_consent_label{
         font-size: 14px;
       }
-}
+  }
 
-// Footer
-.gform_wrapper.gravity-theme .gform_footer{
+  // Footer
+  .gravity-theme .gform_footer{
     margin-top: 20px !important;
 
     input{
@@ -69,18 +69,19 @@ margin: 0 auto 40px auto;
 
         margin:0 auto
       }
-}
-  
+  }
 
-button, .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"], .bg-accent, .bg-accent-hover:hover, .bg-accent-hover:focus, :root .has-accent-background-color, .comment-reply-link{
+
+  button, .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"], .bg-accent, .bg-accent-hover:hover, .bg-accent-hover:focus, :root .has-accent-background-color, .comment-reply-link{
   @include button();
 
   box-shadow: none;
-}
+  }
 
-input.facetwp-slider-reset, input[type="button"]{
+  input.facetwp-slider-reset, input[type="button"]{
   margin-top: 20px;
   background-color: $col_black !important;
   font-size: 14px;
   padding: 8px 16px;
+  }
 }

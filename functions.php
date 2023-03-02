@@ -73,23 +73,8 @@ function my_custom_css2backOffice() {
 // Ajout de scripts dans le header
 add_action( 'wp_head', function() { ?>
 
-    <!-- Facet WP -->
-    <script>
-        (function($) {
-            $(document).on('facetwp-refresh', function() {
-                if ( FWP.soft_refresh == true ) {
-                    FWP.enable_scroll = true;
-                } else {
-                    FWP.enable_scroll = false;
-                }
-            });
-            $(document).on('facetwp-loaded', function() {
-                if ( FWP.enable_scroll == true ) {
-                    $('html, body').animate({ scrollTop: 0 }, 500);
-                }
-            });
-        })(jQuery);
-    </script>
+    <!-- Atlas Icons -->
+    <link rel='stylesheet' href='/wp-content/themes/coupille/lib/Atlas-icons-font-main/style.css' media='all' />
 
 <?php } );
 
