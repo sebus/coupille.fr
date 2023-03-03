@@ -5,7 +5,7 @@
   color: $col_white ;
 }
 
-.gform_wrapper{
+.gform_wrapper,.facetwp-facet{
   input[type="date"], input[type="email"], input[type="password"], input[type="search"], input[type="text"], input[type="url"], textarea {
     background-color: $col_real_white;
     border-radius: .5rem;

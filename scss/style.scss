@@ -13,6 +13,25 @@
 */
 
 
+/* Fadin Effect
+  Source : https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/
+*/
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
 
 /* color */
 $col_white: #F2F2F2;
@@ -171,20 +190,17 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
   display: none; 
 
   position: fixed; 
-  bottom: 75px; 
+  bottom: 30px; 
   right: 30px; 
   z-index: 99; 
   
-  border: none; 
+  border: 1px solid $col_black; 
   outline: none; 
-  background-color:$col_gray_light; 
+  background-color:transparent; 
   cursor: pointer; 
   padding: 15px; 
   border-radius: 25px; 
   
-  text-transform: none;
-  font-weight: 400;
-  letter-spacing: normal;
   font-size: 1.4rem;
   color: $col_black; 
   
@@ -192,13 +208,9 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
 
 
 /* FOOTER */
-.footer-nav-widgets-wrapper{
-  background-color: gainsboro ;
-}
-
 #site-footer{
-  border-top:1px solid $col_black ;
-  padding: 1rem 0 1rem 0;
+  border-top:none;
+  padding: 0 0 4rem 0;
   margin-top: 20rem;
 }
 
@@ -222,7 +234,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
     }
     a {
       display:block;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
     li:first-child a{
       font-weight: 700
