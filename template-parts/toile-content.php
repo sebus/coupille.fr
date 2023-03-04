@@ -17,7 +17,7 @@
 
 	<?php
 
-	get_template_part( 'template-parts/toile-entry-header' );
+	get_template_part( 'template-parts/toile-entry-header' );  
 
 	get_template_part( 'template-parts/toile-featured-image' );
 
@@ -26,6 +26,8 @@
 	<div class="post-inner">
 
 		<div class="entry-content">
+
+
 			
 			<table>
 				<tr>

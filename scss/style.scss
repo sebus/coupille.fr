@@ -12,6 +12,17 @@
 
 */
 
+/**/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	-webkit-font-smoothing: antialiased;
+	word-break:normal;
+	word-wrap: break-word;
+}
+
+
 
 /* Fadin Effect
   Source : https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/
@@ -68,8 +79,8 @@ body, #site-header, .footer-nav-widgets-wrapper, #site-footer, .menu-modal, .men
   background-color: transparent ;
 }
 
-body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover, .color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus)::first-letter, .wp-block-button.is-style-outline, a {
-    color: $col_black !important;
+body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover{
+  color: $col_black !important;
 }
 
 h1, .heading-size-1 {
@@ -240,6 +251,41 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
       font-weight: 700
     }
 
+  }
+}
+
+/* Block Cover */
+.page-id-4554{
+  .wp-block-cover{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .wp-block-cover__inner-container{
+    a{
+      text-decoration: none;
+      font-weight: 600;
+      color: $col_white;
+      
+      i{
+        font-size: 90%;
+      }
+    
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  
+  }
+}
+
+
+/* Fil d'Ariane */
+.yoast-breadcrumbs{
+  text-align: center;
+  font-size: 1.4rem;
+ 
+  a{
+    color:$col_black;
   }
 }
 
