@@ -52,6 +52,11 @@ $col_gray: #888888;
 $col_gray_light: #d1d1d1;
 $col_gray_dark:#DBD9D9;
 
+/* spacing */
+$space_xs:10px;
+$space_s:20px;
+$space_m:40px;
+
 /* Personnalisation du thème parent */
 
 body,html{
@@ -79,7 +84,7 @@ body, #site-header, .footer-nav-widgets-wrapper, #site-footer, .menu-modal, .men
   background-color: transparent ;
 }
 
-body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover{
+body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover,.facetwp-pager a{
   color: $col_black !important;
 }
 
@@ -159,7 +164,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
   #site-content{
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 $space_m;
     article{
       .entry-content{
         table{
@@ -210,10 +215,14 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
   background-color:transparent; 
   cursor: pointer; 
   padding: 15px; 
-  border-radius: 25px; 
+  border-radius: 30px; 
   
-  font-size: 1.4rem;
+  font-size: inherit;
   color: $col_black; 
+
+  &:hover{
+    text-decoration: none;
+  }
   
 }
 
@@ -241,7 +250,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
       display:block;
       width:fit-content;
       float:left;
-      margin:0 20px 0 0;
+      margin:0 $space_s 0 0;
     }
     a {
       display:block;

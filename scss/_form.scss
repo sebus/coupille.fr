@@ -23,7 +23,7 @@
   background-color: $col_white;
   border-radius: 26px;
   padding:5px 10px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto $space_m auto;
 
     p{
         margin:0;
@@ -62,7 +62,7 @@
 
   // Footer
   .gravity-theme .gform_footer{
-    margin-top: 20px !important;
+    margin-top: $space_s !important;
 
     input{
         @include button();
@@ -79,7 +79,7 @@
   }
 
   input.facetwp-slider-reset, input[type="button"]{
-  margin-top: 20px;
+  margin-top: $space_s;
   background-color: $col_black !important;
   font-size: 14px;
   padding: 8px 16px;

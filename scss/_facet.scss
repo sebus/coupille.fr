@@ -1,19 +1,19 @@
 /* Les critères */
 .critere{
 
-    padding: 15px;
+    padding: $space_s;
     font-size: 16px;
 
     p{
       font-weight: 700;
       //border-top: 1px solid $col_gray;
       border-bottom: none;
-      padding-top: 20px;
-      margin-bottom: 10px;
+      padding-top: $space_s;
+      margin-bottom: $space_xs;
     }
   
     .facetwp-facet {
-      margin-bottom: 20px;
+      margin-bottom: $space_s;
       padding: 0;
     
     
@@ -21,6 +21,18 @@
     .facetwp-hidden,
     .facetwp-autocomplete-update{
       display: none !important;
+    }
+
+    .wp-block-group:first-child{
+      margin-top: 0 !important;
+    }
+
+    background-color: pink;
+
+    .sticky{
+      border: 1px solid $col_black;
+      position: sticky;
+      top: 10px;
     }
   
   }
@@ -30,6 +42,34 @@
     padding: 0 !important;
   
     .facetwp-facet{
-      padding: 10px 20px;
+      padding: $space_xs $space_s;
     }
+  }
+
+  .facetwp-facet-pagination_1 {
+
+    margin-top: $space_m;
+    border-top: 1px solid $col_black;
+    padding-top: $space_m;
+
+    .facetwp-pager{
+      margin: 0 auto;
+      width: fit-content;
+
+      a{
+        font-size: 16px;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+      a.active{
+        border: 1px solid $col_black;
+        border-radius: 15PX;
+        padding: 5px 10px;
+      }
+    }
+
   }
