@@ -9,20 +9,44 @@
 
 
 
-if ( has_post_thumbnail() && ! post_password_required() ) {
+if ( has_post_thumbnail() ) {
 
-	$featured_media_inner_classes = '';
-
-	// Make the featured media thinner on archive pages.
-	if ( ! is_singular() ) {
-		$featured_media_inner_classes .= ' medium';
-	}
-
-	
 	?>
 
-
 	<figure class="featured-media">
+
+		<div class="toile-notice">
+			<table>
+				<tr>
+					<td>Titre</td>
+					<td><?php the_field('titre'); ?></td>
+				</tr>
+				<tr>
+					<td>Numéro de toile</td>
+					<td><?php the_field('num_toile'); ?></td>
+				</tr>
+				<tr>
+					<td>Année</td>
+					<td><?php the_field('annee'); ?></td>
+				</tr>
+				<tr>
+					<td>Dimensions</td>
+					<td><?php echo str_replace('X',' x ',get_field('dimensions')); ?></td>
+				</tr>
+				<tr>
+					<td>Collection</td>
+					<td><?php 
+						$field = get_field_object( 'collection' );
+						$value = $field['value'];
+						$label = $field['choices'][ $value ];
+
+						echo $label;
+						
+					?></td>
+				</tr>
+				
+			</table>
+		</div>
 
 		<div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
 

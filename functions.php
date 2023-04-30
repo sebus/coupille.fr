@@ -76,8 +76,31 @@ add_action( 'wp_head', function() { ?>
     <!-- Atlas Icons -->
     <link rel='stylesheet' href='/wp-content/themes/coupille/lib/Atlas-icons-font-main/style.css' media='all' />
 
+	
+	<!-- Start Open Web Analytics Tracker -->
+	<script type="text/javascript">
+	//<![CDATA[
+	var owa_baseUrl = 'https://stats.atelier-contigo.fr/';
+	var owa_cmds = owa_cmds || [];
+	owa_cmds.push(['setSiteId', 'bb56d45ff811c76d3e0236a66f85d502']);
+	owa_cmds.push(['trackPageView']);
+	owa_cmds.push(['trackClicks']);
+
+	(function() {
+		var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+		owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+		_owa.src = owa_baseUrl + 'modules/base/dist/owa.tracker.js';
+		var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+	}());
+	//]]>
+	</script>
+	<!-- End Open Web Analytics Code -->
+
+        
+
 <?php } );
 
+// Ancre formulaire
 add_filter( 'gform_confirmation_anchor', '__return_true' );
 
 
