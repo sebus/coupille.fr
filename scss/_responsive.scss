@@ -1,3 +1,21 @@
+/* Menu mobile */
+body .menu-modal-inner{
+  background-color: $col_black;
+
+  a,button span{
+    color: white;
+    text-decoration: none;
+  }
+}
+.menu-modal .toggle {
+  color: white;
+}
+.modal-menu li{
+  border: none;
+}
+
+
+
 /* Un peu de responsive pour les grilles */
 
 @media (max-width: 1440px){

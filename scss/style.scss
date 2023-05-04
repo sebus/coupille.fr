@@ -80,11 +80,11 @@ body,html{
 }
 
 
-body, #site-header, .footer-nav-widgets-wrapper, #site-footer, .menu-modal, .menu-modal-inner, .search-modal-inner, .archive-header, .singular .entry-header, .singular .featured-media::before, .wp-block-pullquote::before{
+body, #site-header, .footer-nav-widgets-wrapper, #site-footer, .search-modal-inner, .archive-header, .singular .entry-header, .singular .featured-media::before, .wp-block-pullquote::before{
   background-color: transparent ;
 }
 
-body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover,.facetwp-pager a{
+body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover,.facetwp-pager a{
   color: $col_black !important;
 }
 
