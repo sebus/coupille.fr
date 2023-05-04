@@ -89,7 +89,7 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
 }
 
 h1, .heading-size-1 {
-  font-size: 3.4rem;
+  // font-size: 3.4rem;
   font-weight: 600;
   color: $col_black ;
   }
@@ -98,17 +98,37 @@ h1.entry-title, h2.entry-title {
     margin: 0 0 4rem 0;
     color: $col_black ;
   }
-  h2, .heading-size-2{
-    font-size: 2.8rem;
-    color: $col_black ;
+
+h2, .heading-size-2{
+  font-size: 2.8rem;
+  color: $col_black ;
+}
+
+h3,h4,p{
+  color: $col_black ;
+}
+
+a{
+  color: $col_black;
+}
+
+// Ajustement pour la page d'accueil uniquement
+.home {
+  .header-titles{
+    display: none;
   }
-  h3,h4,p{
-    color: $col_black ;
+  h1.entry-title{
+    text-transform: uppercase;
+    font-weight: 400;
+    strong{
+      font-weight: 900;
+    }
   }
+}
 
 .header-inner,.section-inner{
-max-width: 100%;
-}
+  max-width: 100%;
+  }
 
 /* Menu */
 .primary-menu{
@@ -160,6 +180,11 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
       .toile-notice{
         table{
           margin: 0;
+
+          td.libelle{
+            width: 170px;
+            font-size: 80%;
+          }
         }
       }
 

@@ -1,8 +1,17 @@
 /* Un peu de responsive pour les grilles */
+@media (max-width: 1440px){
+  #site-content  .fwpl-layout.el-xqzw08 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}
+  
+
+
 @media (max-width: 1280px){
-    .fwpl-layout.el-xqzw08 {
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-gap: 15px !important;
+    #site-content  .fwpl-layout.el-xqzw08 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
     }
     .page-id-71{
       .facet_grid{
@@ -15,45 +24,70 @@
         flex-basis:75% !important;
       }
     }
-    #site-header{
-        button{
-            background-color: $col_white !important;
-            color: $col_black !important;
-        }
-    }
+    // #site-header{
+    //     button{
+    //         background-color: $col_white !important;
+    //         color: $col_black !important;
+    //     }
+    // }
     .menu-wrapper.section-inner{
         width: 100vw;
     }
     button.close-nav-toggle{
         padding: 3.1rem 1rem;
     }
-  }
-  
-  @media (min-width: 700px){
-    .singular .entry-header {
-      padding: 6rem 0 0 0;
+
+    #site-footer{
+      margin-top: 5rem;
     }
-    
-    .footer-widgets-outer-wrapper {
-        padding: 2rem 0;
-    }
-  }
-  
-  @media (min-width: 1220px){
-      h1, .heading-size-1 {
-      font-size: 5.4rem;
-      }
-      .footer-widgets-outer-wrapper{
-        max-width: 50vw;
-      }
-  }
-  
-  @media (min-width: 1000px){
-      .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
-      margin-bottom: 4rem;
-      margin-top: 4rem;
-      }
+
+    .single-toile #site-content .featured-media {
+      grid-template-columns: 1fr;
+      
+        .toile-notice{
+          order: 2;
+        }
+        
+        .featured-media-inner{
+          padding: 0;
+          margin-bottom: 5rem;
+        }
   }
 
 
-  /**/
+}
+
+@media (max-width: 500px){
+  #site-content  .fwpl-layout.el-xqzw08 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
+}
+  
+
+
+@media (min-width: 700px){
+  .singular .entry-header {
+    padding: 6rem 0 0 0;
+  }
+  
+  .footer-widgets-outer-wrapper {
+      padding: 2rem 0;
+  }
+}
+  
+@media (min-width: 1220px){
+    h1, .heading-size-1 {
+    // font-size: 5.4rem;
+    }
+    .footer-widgets-outer-wrapper{
+      max-width: 50vw;
+    }
+}
+  
+@media (min-width: 1000px){
+    .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    }
+}

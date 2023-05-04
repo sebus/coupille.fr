@@ -18,23 +18,23 @@ if ( has_post_thumbnail() ) {
 		<div class="toile-notice">
 			<table>
 				<tr>
-					<td>Titre</td>
+					<td class="libelle">Titre</td>
 					<td><?php the_field('titre'); ?></td>
 				</tr>
 				<tr>
-					<td>Numéro de toile</td>
+					<td class="libelle">Numéro de toile</td>
 					<td><?php the_field('num_toile'); ?></td>
 				</tr>
 				<tr>
-					<td>Année</td>
+					<td class="libelle">Année</td>
 					<td><?php the_field('annee'); ?></td>
 				</tr>
 				<tr>
-					<td>Dimensions</td>
+					<td class="libelle">Dimensions</td>
 					<td><?php echo str_replace('X',' x ',get_field('dimensions')); ?></td>
 				</tr>
 				<tr>
-					<td>Collection</td>
+					<td class="libelle">Collection</td>
 					<td><?php 
 						$field = get_field_object( 'collection' );
 						$value = $field['value'];
@@ -46,6 +46,7 @@ if ( has_post_thumbnail() ) {
 				</tr>
 				
 			</table>
+
 		</div>
 
 		<div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
