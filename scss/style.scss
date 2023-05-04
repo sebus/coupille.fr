@@ -5,7 +5,7 @@
  Author:       contigo!
  Author URI:   
  Template:     twentytwenty
- Version:      1.1.1
+ Version:      1.1.3
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twentytwentychild
@@ -88,6 +88,12 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
   color: $col_black !important;
 }
 
+.header-inner,.section-inner{
+  max-width: 100%;
+  }
+
+/* Typographie */
+
 h1, .heading-size-1 {
   // font-size: 3.4rem;
   font-weight: 600;
@@ -112,7 +118,8 @@ a{
   color: $col_black;
 }
 
-// Ajustement pour la page d'accueil uniquement
+/* Ajustement pour la page d'accueil uniquement */
+
 .home {
   .header-titles{
     display: none;
@@ -126,11 +133,8 @@ a{
   }
 }
 
-.header-inner,.section-inner{
-  max-width: 100%;
-  }
-
 /* Menu */
+
 .primary-menu{
   li{
     a{
@@ -144,6 +148,7 @@ a{
 }
 
 /* Entry content */
+
 #site-content{
     min-height: calc(100vh - 200px);
     // padding-top: 50px;
@@ -165,7 +170,8 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
   display: none;        
 }
 
-/* SINGLE TOILE */
+/* Single toile */
+
 .single-toile{
   #site-content{
     max-width: 1280px;
@@ -173,7 +179,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
     margin: 0 auto;
     padding: 0 $space_m;
 
-    .featured-media{
+    .toile-container{
       display: grid;
       grid-template-columns: 30% auto;
 
@@ -188,24 +194,24 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
         }
       }
 
-      .featured-media-inner{
+      .featured-media{
           padding: 0 20px;
           width: fit-content;
+
+          .featured-media-inner {
+            position: relative;
+            left:auto;
+            width:fit-content;
+          }
 
       }
     }
 
   }
 }
-.singular .featured-media-inner {
-  left: 0;
-}
-.singular .featured-media::before{
-  background-color:transparent !important;
-}
 
 
-/* TIME LINE */
+/* Biographie */
 
 .wp-block-tlgb-b-timeline-block .timeline__content {
   label{
@@ -219,12 +225,13 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
 }
 
 
-/* GALLERY */
+/* Catalogue */
+
 .wp-block-gallery:first-child{
   margin-top: 0 !important;
 }
 
-/* SCROLL */
+/* Bouton scroll to top */
 #myBtn {
   display: none; 
 
@@ -250,7 +257,45 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
 }
 
 
-/* FOOTER */
+/* Entretiens */
+
+.page-id-4554{
+  .wp-block-cover{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .wp-block-cover__inner-container{
+    a{
+      text-decoration: none;
+      font-weight: 600;
+      color: $col_white;
+      
+      i{
+        font-size: 90%;
+      }
+    
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  
+  }
+}
+
+
+
+
+/* Fil d'Ariane */
+.yoast-breadcrumbs{
+  text-align: center;
+  font-size: 1.4rem;
+ 
+  a{
+    color:$col_black;
+  }
+}
+
+/* Footer */
 #site-footer{
   border-top:none;
   padding: 0 0 4rem 0;
@@ -290,41 +335,6 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
   }
 }
 
-/* Block Cover */
-.page-id-4554{
-  .wp-block-cover{
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  .wp-block-cover__inner-container{
-    a{
-      text-decoration: none;
-      font-weight: 600;
-      color: $col_white;
-      
-      i{
-        font-size: 90%;
-      }
-    
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-  
-  }
-}
-
-
-/* Fil d'Ariane */
-.yoast-breadcrumbs{
-  text-align: center;
-  font-size: 1.4rem;
- 
-  a{
-    color:$col_black;
-  }
-}
-
 .footer-top-visible .footer-nav-widgets-wrapper{
   margin-top:0;
   border:none;
@@ -354,9 +364,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
   }
   
 }
-
-
-
+@import 'blog.scss';
 @import 'facet.scss';
 @import 'form.scss';
 @import 'responsive.scss';

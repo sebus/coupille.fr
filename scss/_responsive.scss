@@ -1,12 +1,11 @@
 /* Un peu de responsive pour les grilles */
+
 @media (max-width: 1440px){
   #site-content  .fwpl-layout.el-xqzw08 {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
 }
-  
-
 
 @media (max-width: 1280px){
     #site-content  .fwpl-layout.el-xqzw08 {
@@ -24,12 +23,6 @@
         flex-basis:75% !important;
       }
     }
-    // #site-header{
-    //     button{
-    //         background-color: $col_white !important;
-    //         color: $col_black !important;
-    //     }
-    // }
     .menu-wrapper.section-inner{
         width: 100vw;
     }
@@ -41,20 +34,18 @@
       margin-top: 5rem;
     }
 
-    .single-toile #site-content .featured-media {
+    .single-toile #site-content .toile-container {
       grid-template-columns: 1fr;
       
         .toile-notice{
           order: 2;
         }
         
-        .featured-media-inner{
+        .featured-media{
           padding: 0;
           margin-bottom: 5rem;
         }
   }
-
-
 }
 
 @media (max-width: 500px){
@@ -63,8 +54,6 @@
     grid-gap: 15px;
   }
 }
-  
-
 
 @media (min-width: 700px){
   .singular .entry-header {

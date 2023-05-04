@@ -1,0 +1,32 @@
+[data-name="journal"]{
+    .el-cgfjef{ 
+        border-bottom: 1px solid $col_black;
+    }
+    h2,p{
+        margin : 2rem 0 1rem 0;
+    }
+
+    h2{
+        font-size: 4.2rem;
+
+        a{
+            text-decoration: none;
+
+            &:focus, &:active, &:hover {
+                text-decoration: underline;
+              }
+            transition: background-color 0.4s, color 0.4s ease-in-out;
+
+        }
+    }
+
+    .el-aa97se{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .fwpl-item{
+            
+        }
+    }
+}

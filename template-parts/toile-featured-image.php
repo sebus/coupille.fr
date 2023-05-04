@@ -12,9 +12,7 @@
 if ( has_post_thumbnail() ) {
 
 	?>
-
-	<figure class="featured-media">
-
+	<div class="toile-container">
 		<div class="toile-notice">
 			<table>
 				<tr>
@@ -44,30 +42,36 @@ if ( has_post_thumbnail() ) {
 						
 					?></td>
 				</tr>
+				<tr>
+					<td class="libelle">&nbsp;</td>
+					<td><a href="<?php echo the_permalink( 9 ) ?>?objet=<?php the_title(); ?>">Poser une question</a></td>
+				</tr>
 				
 			</table>
 
 		</div>
 
-		<div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
+		<figure class="featured-media">
 
-			<?php
-			the_post_thumbnail();
-
-			$caption = get_the_post_thumbnail_caption();
-
-			if ( $caption ) {
-				?>
-
-				<figcaption class="wp-caption-text"><?php echo wp_kses_post( $caption ); ?></figcaption>
+			<div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
 
 				<?php
-			}
-			?>
+				the_post_thumbnail();
 
-		</div><!-- .featured-media-inner -->
+				$caption = get_the_post_thumbnail_caption();
 
-	</figure><!-- .featured-media -->
+				if ( $caption ) {
+					?>
 
+					<figcaption class="wp-caption-text"><?php echo wp_kses_post( $caption ); ?></figcaption>
+
+					<?php
+				}
+				?>
+
+			</div><!-- .featured-media-inner -->
+
+		</figure><!-- .featured-media -->
+	</div<
 	<?php
 }
