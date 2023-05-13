@@ -14,31 +14,35 @@ if ( has_post_thumbnail() ) {
 	?>
 	<div class="toile-container">
 		<div class="toile-notice">
-			<table>
+			<table class="sticky">
 				<tr>
 					<td class="libelle">Titre</td>
-					<td><?php the_field('titre'); ?></td>
+					<td><?php if(get_field( 'titre' )){the_field('titre');} ?></td>
 				</tr>
 				<tr>
 					<td class="libelle">Numéro de toile</td>
-					<td><?php the_field('num_toile'); ?></td>
+					<td><?php if(get_field( 'num_toile' )){the_field('num_toile');} ?></td>
 				</tr>
 				<tr>
 					<td class="libelle">Année</td>
-					<td><?php the_field('annee'); ?></td>
+					<td><?php if(get_field( 'annee' )){the_field('annee');} ?></td>
 				</tr>
 				<tr>
 					<td class="libelle">Dimensions</td>
-					<td><?php echo str_replace('X',' x ',get_field('dimensions')); ?></td>
+					<td><?php if(get_field( 'dimensions' )){echo str_replace('X',' x ',get_field('dimensions'));} ?></td>
 				</tr>
 				<tr>
 					<td class="libelle">Collection</td>
 					<td><?php 
+					if(get_field( 'collection' ))
+					{
 						$field = get_field_object( 'collection' );
 						$value = $field['value'];
 						$label = $field['choices'][ $value ];
 
 						echo $label;
+					}
+						
 						
 					?></td>
 				</tr>
