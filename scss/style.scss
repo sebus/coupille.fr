@@ -99,6 +99,10 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
   overflow: unset;
 }
 
+.cover-header + .post-inner {
+  padding-top: 5rem;
+}
+
 .sticky{
   // border: 1px dotted red;
   position: sticky;
