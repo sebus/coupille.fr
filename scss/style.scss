@@ -64,6 +64,15 @@ body,html{
 }
 
 
+/* Logo */
+.homeLogo{
+  display: inline-block;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+}
+
 .home {
   .site-title a{
     color: $col_white !important;

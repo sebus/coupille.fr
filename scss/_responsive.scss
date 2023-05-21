@@ -88,6 +88,10 @@ body .menu-modal-inner{
 }
 
 @media (min-width: 700px){
+  .site-logo img {
+    max-height: 4rem;
+  }
+
   .singular .entry-header {
     padding: 6rem 0 0 0;
   }
