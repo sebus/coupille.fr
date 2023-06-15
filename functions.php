@@ -102,4 +102,7 @@ add_action( 'wp_head', function() { ?>
 <?php } );
 
 // Ancre formulaire
-add_filter( 'gform_confirmation_anchor', '__return_true' );
+//add_filter( 'gform_confirmation_anchor', '__return_true' );
+add_filter( 'gform_confirmation_anchor', function() {
+    return 20;
+} );
