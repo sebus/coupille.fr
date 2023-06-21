@@ -106,3 +106,10 @@ add_action( 'wp_head', function() { ?>
 add_filter( 'gform_confirmation_anchor', function() {
     return 20;
 } );
+
+// Ajouter le champ CC dans les formulaires
+add_filter('gform_notification_enable_cc', 'enable_cc', 10, 3 );
+ 
+function enable_cc( $enable, $notification, $form ){
+  return true;
+}
