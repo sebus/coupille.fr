@@ -122,3 +122,20 @@ body .menu-modal-inner{
     margin-top: 4rem;
     }
 }
+
+@media (max-width: 1000px){
+
+  // Accueil
+  .cover-header-inner-wrapper{
+    align-items: center;
+    justify-content: center;
+  }
+  .homeIntro{
+    padding: 2rem;
+    margin:5rem 0 !important;
+  }
+  .alignfull:not(.has-background) > .wp-block-group__inner-container > p:not(.has-background-color){
+    padding: 0;
+  }
+
+}
