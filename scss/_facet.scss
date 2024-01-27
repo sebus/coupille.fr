@@ -1,21 +1,23 @@
+@use "global" as g;
+
 /* Les critères */
 .critere{
 
-    padding: $space_s;
+    padding: g.$space_s;
     font-size: 16px;
     // border: 1px solid green;
     position: relative;  
 
     p{
       font-weight: 700;
-      //border-top: 1px solid $col_gray;
+      //border-top: 1px solid g.$col_gray;
       border-bottom: none;
-      padding-top: $space_s;
-      margin-bottom: $space_xs;
+      padding-top: g.$space_s;
+      margin-bottom: g.$space_xs;
     }
   
     .facetwp-facet {
-      margin-bottom: $space_s;
+      margin-bottom: g.$space_s;
       padding: 0;
     
     
@@ -36,15 +38,15 @@
     padding: 0 !important;
   
     .facetwp-facet{
-      padding: $space_xs $space_s;
+      padding: g.$space_xs g.$space_s;
     }
   }
 
   .facetwp-facet-pagination_1 {
 
-    margin-top: $space_m;
-    border-top: 1px solid $col_black;
-    padding-top: $space_m;
+    margin-top: g.$space_m;
+    border-top: 1px solid g.$col_black;
+    padding-top: g.$space_m;
 
     .facetwp-pager{
       margin: 0 auto;
@@ -60,7 +62,7 @@
       }
 
       a.active{
-        border: 1px solid $col_black;
+        border: 1px solid g.$col_black;
         border-radius: 15PX;
         padding: 5px 10px;
       }

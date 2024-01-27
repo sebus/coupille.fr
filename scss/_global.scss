@@ -1,0 +1,394 @@
+/*!
+ Theme Name:   Paul COUPILLE
+ Theme URI:    
+ Description:  
+ Author:       contigo!
+ Author URI:   
+ Template:     twentytwenty
+ Version:      1.1.3
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentytwentychild
+
+*/
+
+/**/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	-webkit-font-smoothing: antialiased;
+	word-break:normal;
+	word-wrap: break-word;
+}
+
+
+
+/* Fadin Effect
+  Source : https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/
+*/
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+
+/* color */
+$col_white: #F2F2F2;
+$col_real_white:#FFF;
+$col_black: #222222;
+$col_gray: #888888;
+$col_gray_light: #d1d1d1;
+$col_gray_dark:#DBD9D9;
+
+/* spacing */
+$space_xs:10px;
+$space_s:20px;
+$space_m:40px;
+
+/* Personnalisation du thème parent */
+
+body,html{
+  background-color: $col_white ;
+}
+
+
+/* Logo */
+.homeLogo{
+  display: inline-block;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+}
+
+.home {
+  .site-title a{
+    color: $col_white !important;
+  }
+  .header-navigation-wrapper{
+    color:$col_white;
+      a{
+          color: $col_white  !important;
+      }
+    }
+}
+.privacy-policy {
+  margin: 0;
+}
+
+
+body, #site-header, .footer-nav-widgets-wrapper, #site-footer, .search-modal-inner, .archive-header, .singular .entry-header, .singular .featured-media::before, .wp-block-pullquote::before{
+  background-color: transparent ;
+}
+
+body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover,.facetwp-pager a{
+  color: $col_black !important;
+}
+
+.header-inner,.section-inner{
+  max-width: 100%;
+  }
+
+#site-content{
+  min-height: calc(100vh - 210px);
+  // Fix for sticky
+  // Source : https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working#checking-if-a-threshold-has-been-specified
+  overflow: unset;
+}
+
+.cover-header + .post-inner {
+  padding-top: 0rem;
+}
+
+.sticky{
+  // border: 1px dotted red;
+  position: sticky;
+  position: -webkit-sticky;
+  top:10px;
+}
+
+/* Typographie */
+
+h1, .heading-size-1 {
+  // font-size: 3.4rem;
+  font-weight: 600;
+  color: $col_black ;
+  }
+
+h1.entry-title, h2.entry-title {
+    margin: 0 0 4rem 0;
+    color: $col_black ;
+  }
+
+h2, .heading-size-2{
+  font-size: 2.8rem;
+  color: $col_black ;
+}
+
+h3,h4,p{
+  color: $col_black ;
+}
+
+a{
+  color: $col_black;
+}
+
+/* Ajustement pour la page d'accueil uniquement */
+
+.home {
+  .header-titles{
+    display: none;
+  }
+  h1.entry-title{
+    text-transform: uppercase;
+    font-weight: 400;
+    strong{
+      font-weight: 900;
+    }
+  }
+}
+
+/* Menu */
+
+.primary-menu{
+  li{
+    a{
+      padding: 5px 10px;
+    }
+  }
+  li.catalogue a{
+    text-transform: uppercase;
+  }
+
+}
+
+/* Entry content */
+
+#site-content{
+    //min-height: calc(100vh - 200px);
+    // padding-top: 50px;
+}
+p,.entry-content,.gform_description,label,legend {
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 21px;
+}
+
+.entry-content{
+  .home &{
+    min-height: 100vh;
+  }
+}
+
+body:not(.overlay-header) .toggle-inner .toggle-text{
+  display: none;        
+}
+
+/* Single toile */
+
+.single-toile{
+  #site-content{
+    max-width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 $space_m;
+
+    .toile-container{
+      display: grid;
+      grid-template-columns: 30% auto;
+
+      .toile-notice{
+        table{
+          margin: 0;
+
+          td.libelle{
+            width: 170px;
+            font-size: 80%;
+          }
+        }
+      }
+
+      .featured-media{
+          padding: 0 20px;
+          width: fit-content;
+          margin: 0 auto;
+
+          .featured-media-inner {
+            position: relative;
+            left:auto;
+            width:fit-content;
+          }
+
+      }
+    }
+
+  }
+}
+
+
+/* Biographie */
+
+.wp-block-tlgb-b-timeline-block .timeline__content {
+  label{
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+  }
+  p{
+    font-size: 16px;
+  }
+}
+
+
+/* Catalogue */
+
+.wp-block-gallery:first-child{
+  margin-top: 0 !important;
+}
+
+/* Bouton scroll to top */
+#myBtn {
+  display: none; 
+
+  position: fixed; 
+  bottom: 30px; 
+  right: 30px; 
+  z-index: 99; 
+  
+  border: 1px solid $col_black; 
+  outline: none; 
+  background-color:white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 30px; 
+  
+  font-size: inherit;
+  color: $col_black; 
+
+  &:hover{
+    text-decoration: none;
+  }
+  
+}
+
+
+/* Entretiens */
+
+.page-id-4554{
+  .wp-block-cover{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .wp-block-cover__inner-container{
+    a{
+      text-decoration: none;
+      font-weight: 600;
+      color: $col_white;
+      
+      i{
+        font-size: 90%;
+      }
+    
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  
+  }
+}
+
+
+
+
+/* Fil d'Ariane */
+.yoast-breadcrumbs{
+  text-align: center;
+  font-size: 1.4rem;
+ 
+  a{
+    color:$col_black;
+  }
+}
+
+/* Footer */
+#site-footer{
+  border-top:none;
+  padding: 0 0 4rem 0;
+  margin-top: 6rem;
+
+  a{
+    color: $col_black;
+  }
+}
+
+#site-footer .section-inner .footer-credits{
+  margin-bottom: auto;
+}
+.footer-menu-nav{
+  padding: 0;
+  margin: 0;
+
+  .widget {
+    ol,ul {
+      list-style: none;
+      margin:0
+    }
+    li {
+      display:block;
+      width:fit-content;
+      float:left;
+      margin:0 $space_s 0 0;
+    }
+    a {
+      display:block;
+      font-size: 1.5rem;
+    }
+    li:first-child a{
+      font-weight: 700
+    }
+
+  }
+}
+
+.footer-top-visible .footer-nav-widgets-wrapper{
+  margin-top:0;
+  border:none;
+  
+}
+
+.header-footer-group{
+  .footer-inner{
+
+    // border-top:1px solid black;
+
+
+    .gform_wrapper{
+      .gform_heading{
+        margin-bottom: 5rem;
+
+        h2{
+          font-size: 3.2rem;
+        }
+        span.gform_description{
+          font-size: 16px;
+          
+        }
+      }
+    }
+
+  }
+  
+}

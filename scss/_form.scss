@@ -1,9 +1,15 @@
+@use "global" as g;
+
 @mixin button{
   padding: 15px 30px;
   border-radius: 0px;
-  background-color: $col_black ;
-  color: $col_white ;
+  background-color: g.$col_black ;
+  color: g.$col_white ;
   width:fit-content;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
 }
 
 @mixin label{
@@ -43,9 +49,9 @@ body {
 
   .gform_wrapper,.facetwp-facet,.search-form{
       input[type="date"], input[type="email"], input[type="password"], input[type="search"], input[type="text"], input[type="url"], textarea {
-        background-color: $col_real_white;
+        background-color: g.$col_real_white;
         border-radius: .5rem;
-        border: 1px solid $col_gray_light;
+        border: 1px solid g.$col_gray_light;
         font-family: inherit;
         font-weight: 500;
         padding: .825rem 1.25rem !important;
@@ -55,17 +61,17 @@ body {
 
   // Header
   .gform_heading {
-  border: 1px solid $col_gray_light;
+  border: 1px solid g.$col_gray_light;
   width: fit-content;
   padding: 0;
-  background-color: $col_white;
+  background-color: g.$col_white;
   border-radius: 26px;
   padding:5px 10px;
-  margin: 0 auto $space_m auto;
+  margin: 0 auto g.$space_m auto;
 
     p{
         margin:0;
-        color: $col_black;
+        color: g.$col_black;
         font-size: 14px;
     }
   }
@@ -100,7 +106,7 @@ body {
 
   // Footer
   .gravity-theme .gform_footer{
-    margin-top: $space_s !important;
+    margin-top: g.$space_s !important;
 
     input{
         @include button();
@@ -117,8 +123,8 @@ body {
   }
 
   input.facetwp-slider-reset, input[type="button"]{
-  margin-top: $space_s;
-  background-color: $col_black !important;
+  margin-top: g.$space_s;
+  background-color: g.$col_black !important;
   font-size: 14px;
   padding: 8px 16px;
   }

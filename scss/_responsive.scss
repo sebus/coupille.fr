@@ -1,6 +1,8 @@
+@use "global" as g;
+
 /* Menu mobile */
 body .menu-modal-inner{
-  background-color: $col_black;
+  background-color: g.$col_black;
 
   a,button span{
     color: white;
