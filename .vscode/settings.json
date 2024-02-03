@@ -1,10 +1,10 @@
 {
-    "liveSassCompile.settings.forceBaseDirectory":"/wp-content/themes/coupille/scss",
+    "liveSassCompile.settings.forceBaseDirectory":"/scss",
     "liveSassCompile.settings.formats":[
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/wp-content/themes/coupille"
+            "savePath": "/"
         },
     ],
     "editor.fontSize": 13
