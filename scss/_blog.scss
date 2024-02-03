@@ -27,12 +27,21 @@
         justify-content: flex-end;
         align-items: flex-end;
 
-        .fwpl-item{
-            
-        }
+        
     }
 }
 
 body .happyfiles-gallery{
     margin: 0 auto;
 }
+
+.singular .featured-media
+{
+  margin-top: 8rem;
+  margin-bottom: 0;
+}
+
+.post-inner
+{
+    padding-top: 0;
+  }

@@ -3,6 +3,8 @@
 /* Les critères */
 .critere{
 
+  border-right: 1px solid g.$col_black;
+
     .wp-block-group:not(.has-background):not(.alignwide):not(.alignfull){
       margin: 1rem 0 1rem 0 !important;
     }

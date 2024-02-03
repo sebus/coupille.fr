@@ -110,9 +110,7 @@ body .menu-modal-inner{
 }
   
 @media (min-width: 1220px){
-    h1, .heading-size-1 {
-    // font-size: 5.4rem;
-    }
+    
     .footer-widgets-outer-wrapper{
       max-width: 50vw;
     }
@@ -121,7 +119,9 @@ body .menu-modal-inner{
 @media (min-width: 1000px){
     .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
     margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-top: 0rem;
+
+    padding-top: 0rem;
     }
 }
 

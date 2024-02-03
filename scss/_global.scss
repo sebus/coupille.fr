@@ -5,7 +5,7 @@
  Author:       contigo!
  Author URI:   
  Template:     twentytwenty
- Version:      1.1.3
+ Version:      1.1.8
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twentytwentychild
@@ -162,6 +162,14 @@ a{
 
 /* Menu */
 
+.header-footer-group{
+  border-bottom: 1px solid $col_black;
+
+  .home &{
+    border-bottom:none;
+  }
+}
+
 .primary-menu{
   li{
     a{
@@ -176,10 +184,6 @@ a{
 
 /* Entry content */
 
-#site-content{
-    //min-height: calc(100vh - 200px);
-    // padding-top: 50px;
-}
 p,.entry-content,.gform_description,label,legend {
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: normal;
@@ -188,10 +192,20 @@ p,.entry-content,.gform_description,label,legend {
 }
 
 .entry-content{
+
+  
+  padding-top: 8rem;
+
+  .wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter){
+    margin-top: 0;
+  }
+
   .home &{
     min-height: 100vh;
   }
 }
+
+
 
 body:not(.overlay-header) .toggle-inner .toggle-text{
   display: none;        
@@ -204,25 +218,31 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
     max-width: 1280px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 $space_m;
+    padding: 0;
 
     .toile-container{
       display: grid;
-      grid-template-columns: 30% auto;
+      grid-template-columns: 25% auto;
 
       .toile-notice{
+        padding: $space_m;
         table{
-          margin: 0;
+          margin: 4rem 0;
+          
+          td{
+            
+            font-size: 80%;
+          }
 
           td.libelle{
             width: 170px;
-            font-size: 80%;
+            
           }
         }
       }
 
       .featured-media{
-          padding: 0 20px;
+          padding: $space_m;
           width: fit-content;
           margin: 0 auto;
 
@@ -235,6 +255,13 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
       }
     }
 
+  }
+}
+
+/* Article de blog + toile */
+.post-template,.single-toile {
+  h1.entry-title{
+    margin-bottom: 8rem;
   }
 }
 
@@ -325,9 +352,9 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
 
 /* Footer */
 #site-footer{
-  border-top:none;
-  padding: 0 0 4rem 0;
-  margin-top: 6rem;
+  border-top: 1px solid $col_black;
+  padding: 4rem 0 ;
+  margin-top: 8rem;
 
   a{
     color: $col_black;
