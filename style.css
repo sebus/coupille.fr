@@ -331,6 +331,9 @@ body .happyfiles-gallery {
   font-size: 16px;
   position: relative;
 }
+.critere .wp-block-group:not(.has-background):not(.alignwide):not(.alignfull) {
+  margin: 1rem 0 1rem 0 !important;
+}
 .critere p {
   font-weight: 700;
   border-bottom: none;
@@ -342,7 +345,8 @@ body .happyfiles-gallery {
   padding: 0;
 }
 .critere .facetwp-hidden,
-.critere .facetwp-autocomplete-update {
+.critere .facetwp-autocomplete-update,
+.critere .facetwp-slider-reset {
   display: none !important;
 }
 .critere .wp-block-group:first-child {
@@ -378,6 +382,18 @@ body .happyfiles-gallery {
   border: 1px solid #222222;
   border-radius: 15PX;
   padding: 5px 10px;
+}
+
+/* Taille des images dans la gallerie */
+.fwpl-item.el-gwc0j {
+  background-color: #DBD9D9;
+}
+.fwpl-item.el-gwc0j a img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
 }
 
 body .gform_wrapper.gravity-theme .gfield_label, body label {

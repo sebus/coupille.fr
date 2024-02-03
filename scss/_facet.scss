@@ -3,6 +3,10 @@
 /* Les critères */
 .critere{
 
+    .wp-block-group:not(.has-background):not(.alignwide):not(.alignfull){
+      margin: 1rem 0 1rem 0 !important;
+    }
+
     padding: g.$space_s;
     font-size: 16px;
     // border: 1px solid green;
@@ -23,7 +27,8 @@
     
     }
     .facetwp-hidden,
-    .facetwp-autocomplete-update{
+    .facetwp-autocomplete-update,
+    .facetwp-slider-reset{
       display: none !important;
     }
 
@@ -69,3 +74,17 @@
     }
 
   }
+
+
+  /* Taille des images dans la gallerie */
+
+  .fwpl-item.el-gwc0j{
+    background-color: g.$col_gray_dark;
+    a img{
+      display: block;
+      height: auto;
+      max-width: 100%;
+      max-height: 600px;
+      width: auto;
+    }
+  } 
