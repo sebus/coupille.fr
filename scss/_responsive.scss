@@ -117,12 +117,15 @@ body .menu-modal-inner{
 }
   
 @media (min-width: 1000px){
-    .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
-    margin-bottom: 4rem;
-    margin-top: 0rem;
 
-    padding-top: 0rem;
-    }
+  .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
+    margin-bottom: 4rem  !important;
+    margin-top: 0  !important;
+  }
+  .wp-block-columns:first-child{
+    margin-top: 0rem !important;
+  }
+
 }
 
 @media (max-width: 1000px){

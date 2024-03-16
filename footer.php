@@ -1,5 +1,5 @@
 
-	 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="at-double-arrow-up"></i></button> 
+	 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button> 
 	 <script>
 		// Get the button:
 		let mybutton = document.getElementById("myBtn");

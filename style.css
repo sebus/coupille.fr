@@ -286,9 +286,8 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 
 /* Footer */
 #site-footer {
-  border-top: 1px solid #222222;
-  padding: 4rem 0;
-  margin-top: 8rem;
+  padding: 8rem 0 4rem 0;
+  margin-top: 0rem;
 }
 #site-footer a {
   color: #222222;
@@ -410,7 +409,6 @@ body .happyfiles-gallery {
 
 .facetwp-facet-pagination_1 {
   margin-top: 40px;
-  border-top: 1px solid #222222;
   padding-top: 40px;
 }
 .facetwp-facet-pagination_1 .facetwp-pager {
@@ -669,9 +667,11 @@ body .menu-modal-inner a, body .menu-modal-inner button span {
 }
 @media (min-width: 1000px) {
   .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
-    margin-bottom: 4rem;
-    margin-top: 0rem;
-    padding-top: 0rem;
+    margin-bottom: 4rem !important;
+    margin-top: 0 !important;
+  }
+  .wp-block-columns:first-child {
+    margin-top: 0rem !important;
   }
 }
 @media (max-width: 1000px) {

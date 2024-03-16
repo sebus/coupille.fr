@@ -147,8 +147,7 @@ function my_custom_css2backOffice() {
 // Ajout de scripts dans le header
 add_action( 'wp_head', function() { ?>
 
-    <!-- Atlas Icons -->
-    <link rel='stylesheet' href='/wp-content/themes/coupille/lib/Atlas-icons-font-main/style.css' media='all' />      
+    <script src="https://kit.fontawesome.com/13e086d506.js" crossorigin="anonymous"></script>    
 
 <?php } );
 

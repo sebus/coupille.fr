@@ -192,8 +192,6 @@ p,.entry-content,.gform_description,label,legend {
 }
 
 .entry-content{
-
-  
   padding-top: 8rem;
 
   .wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter){
@@ -365,9 +363,9 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
 
 /* Footer */
 #site-footer{
-  border-top: 1px solid $col_black;
-  padding: 4rem 0 ;
-  margin-top: 8rem;
+  //border-top: 1px solid $col_black;
+  padding: 8rem 0 4rem 0 ;
+  margin-top: 0rem;
 
   a{
     color: $col_black;
