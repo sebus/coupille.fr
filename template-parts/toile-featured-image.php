@@ -36,6 +36,23 @@ if ( has_post_thumbnail() ) {
 						<td><?php if(get_field( 'dimensions' )){echo str_replace('X',' x ',get_field('dimensions'));} ?></td>
 					</tr>
 					<tr>
+						<td class="libelle">Disponibilité</td>
+						<td>
+							<?php
+								if(get_field( 'collection' ))
+								{
+									$field = get_field_object( 'collection' );
+									$value = $field['value'];
+									$label = $field['choices'][ $value ];
+									
+									if($value=='paul'){
+										echo '<div class="dispo"></div>';
+									}
+								}
+							?>
+						</td>
+					</tr>
+					<!--<tr>
 						<td class="libelle">Collection</td>
 						<td><?php 
 						if(get_field( 'collection' ))
@@ -49,8 +66,10 @@ if ( has_post_thumbnail() ) {
 							
 							
 						?></td>
-					</tr>
+					</tr>-->
 				</table>
+
+				
 
 				<p><i class="at-envelope-question"></i> <a href="<?php echo the_permalink( 9 ) ?>?objet=<?php the_title(); ?>">Poser une question</a></p>
 			</div>

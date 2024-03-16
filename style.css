@@ -185,12 +185,25 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 }
 .single-toile #site-content .toile-container .toile-notice table {
   margin: 4rem 0;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .single-toile #site-content .toile-container .toile-notice table td {
   font-size: 80%;
 }
 .single-toile #site-content .toile-container .toile-notice table td.libelle {
   width: 170px;
+}
+.single-toile #site-content .toile-container .toile-notice div.dispo {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .single-toile #site-content .toile-container .featured-media {
   padding: 40px;

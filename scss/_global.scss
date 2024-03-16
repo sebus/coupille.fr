@@ -228,6 +228,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
         padding: $space_m;
         table{
           margin: 4rem 0;
+          width: fit-content;
           
           td{
             
@@ -239,6 +240,18 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
             
           }
         }
+        // Pastille de disponibilité
+        div.dispo{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: green;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+}
       }
 
       .featured-media{
