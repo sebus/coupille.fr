@@ -112,6 +112,26 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
   padding-top: 0rem;
 }
 
+.navPost{
+  margin: 4rem 0;
+
+  .prev-post-button,.next-post-button{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #222222;
+    color: #F2F2F2;
+    width: fit-content;
+
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+
+}
+
 .sticky{
   // border: 1px dotted red;
   position: sticky;
@@ -223,7 +243,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text{
       grid-template-columns: 25% auto;
 
       .toile-notice{
-        padding: $space_m;
+        padding: 0 $space_m;
         table{
           margin: 4rem 0;
           width: fit-content;

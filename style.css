@@ -90,6 +90,22 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
   padding-top: 0rem;
 }
 
+.navPost {
+  margin: 4rem 0;
+}
+.navPost .prev-post-button, .navPost .next-post-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #222222;
+  color: #F2F2F2;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+}
+.navPost .prev-post-button:hover, .navPost .next-post-button:hover {
+  text-decoration: underline;
+}
+
 .sticky {
   position: sticky;
   position: -webkit-sticky;
@@ -181,7 +197,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
   grid-template-columns: 25% auto;
 }
 .single-toile #site-content .toile-container .toile-notice {
-  padding: 40px;
+  padding: 0 40px;
 }
 .single-toile #site-content .toile-container .toile-notice table {
   margin: 4rem 0;
