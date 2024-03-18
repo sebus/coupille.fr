@@ -27,12 +27,20 @@ if ( has_post_thumbnail() ) {
 				$num_toile = get_field('num_toile');
 				//echo $num_toile.'-';
 
+				
 				// Construction des paramètres personnalisés pour la requête précédente
 				$prev_post_args = array(
 					'post_type'     => 'toile', // type du post
-					'meta_key' => 'num_toile', // Key pour le champ ACF qui va servir de tri
-					'meta_value' => $num_toile, // Valeur
-					'meta_compare' => '<', // Opérateur
+					'order'          => 'DESC',
+    				'orderby'        => 'meta_value_num',
+					'meta_query' => array(
+						array(
+							'key'     => 'num_toile',
+							'value'   => (int) $num_toile,
+							'type'    => 'numeric',
+							'compare' => '<'
+						)
+					),
 					
 					'posts_per_page' => 1
 				);
@@ -62,9 +70,16 @@ if ( has_post_thumbnail() ) {
 				// Construction des paramètres personnalisés pour la requête suivante
 				$next_post_args = array(
 					'post_type'     => 'toile', // type du post
-					'meta_key' => 'num_toile', // Key pour le champ ACF qui va servir de tri
-					'meta_value' => $num_toile, // Valeur
-					'meta_compare' => '>', // Opérateur
+					'order'          => 'DESC',
+    				'orderby'        => 'meta_value_num',
+					'meta_query' => array(
+						array(
+							'key'     => 'num_toile',
+							'value'   => (int) $num_toile,
+							'type'    => 'numeric',
+							'compare' => '>'
+						)
+					),
 					
 					'posts_per_page' => 1
 				);
@@ -94,16 +109,6 @@ if ( has_post_thumbnail() ) {
 
 
 				?>
-
-
-
-
-
-
-
-
-
-
 
 
 
