@@ -165,6 +165,22 @@ a{
   color: $col_black;
 }
 
+/* Titres et espacement */
+.entry-content .wp-block-columns h1:first-of-type,
+.entry-content .wp-block-columns h2:first-of-type,
+.entry-content .wp-block-columns h3:first-of-type,
+.entry-content .wp-block-columns h4:first-of-type,
+.entry-content .wp-block-columns h5:first-of-type{
+  margin-top: 0;
+}
+.entry-content .wp-block-columns h1:last-of-type,
+.entry-content .wp-block-columns h2:last-of-type,
+.entry-content .wp-block-columns h3:last-of-type,
+.entry-content .wp-block-columns h4:last-of-type,
+.entry-content .wp-block-columns h5:last-of-type{
+  margin-bottom: 0;
+}
+
 /* Ajustement pour la page d'accueil uniquement */
 
 .home {
