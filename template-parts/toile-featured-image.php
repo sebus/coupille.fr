@@ -17,102 +17,64 @@ if ( has_post_thumbnail() ) {
 			<div class="sticky">
 
 				<div class="navPost">
-				
+						<?php
+						// Récupérer la valeur du champ ACF 'num_toile' pour le post actuel
+						$current_num_toile = get_field('num_toile');
 
-				<?php
-				// On récupère l'ID de la publication courante
-				$current_post_id = get_the_ID();
-
-				// On récupère le numéro de la toile
-				$num_toile = get_field('num_toile');
-				//echo $num_toile.'-';
-
-				
-				// Construction des paramètres personnalisés pour la requête précédente
-				$prev_post_args = array(
-					'post_type'     => 'toile', // type du post
-					'order'          => 'DESC',
-    				'orderby'        => 'meta_value_num',
-					'meta_query' => array(
-						array(
-							'key'     => 'num_toile',
-							'value'   => (int) $num_toile,
-							'type'    => 'numeric',
-							'compare' => '<'
-						)
-					),
-					
-					'posts_per_page' => 1
-				);
-				
-				// Requête personnalisée
-				$prev_post_query = new WP_Query($prev_post_args);
-				
-				// Boucle
-				if ($prev_post_query->have_posts()):
-
-					while( $prev_post_query->have_posts() ) : $prev_post_query->the_post();
-
-					$prev_post_id = get_the_ID();
-					$num_toile_prec = get_field('num_toile');
-					//echo $num_toile_prec;
-					?>
-					<a href="<?php echo get_permalink($prev_post_id); ?>" class="prev-post-button"><i class="fa-solid fa-arrow-left"></i></a>
-					<?php
-
-					endwhile;
-					
-				endif;
-				
-				// Réinitialiser les données de la requête
-				wp_reset_postdata();
-
-				// Construction des paramètres personnalisés pour la requête suivante
-				$next_post_args = array(
-					'post_type'     => 'toile', // type du post
-					'order'          => 'DESC',
-    				'orderby'        => 'meta_value_num',
-					'meta_query' => array(
-						array(
-							'key'     => 'num_toile',
-							'value'   => (int) $num_toile,
-							'type'    => 'numeric',
-							'compare' => '>'
-						)
-					),
-					
-					'posts_per_page' => 1
-				);
-				
-				// Requête personnalisée
-				$next_post_query = new WP_Query($next_post_args);
-				
-				// Boucle
-				if ($next_post_query->have_posts()):
-
-					while( $next_post_query->have_posts() ) : $next_post_query->the_post();
-
-					$next_post_id = get_the_ID();
-					$num_toile_prec = get_field('num_toile');
-					//echo $num_toile_prec;
-					?>
-					<a href="<?php echo get_permalink($next_post_id); ?>" class="prev-post-button"><i class="fa-solid fa-arrow-right"></i></a>
-					<?php
-
-					endwhile;
-					
-				endif;
-				
-				// Réinitialiser les données de la requête
-				wp_reset_postdata();
-
-
-
-				?>
-
-
-
-
+						// Requête pour l'entrée précédente (num_toile plus faible)
+						$args_prev = array(
+							'post_type' => 'toile',
+							'posts_per_page' => 1,
+							'meta_key' => 'num_toile',
+							'orderby' => 'meta_value_num',
+							'order' => 'DESC',
+							'meta_query' => array(
+								array(
+									'key' => 'num_toile',
+									'value' => $current_num_toile,
+									'compare' => '<',
+									'type' => 'NUMERIC'
+								)
+							)
+						);
+						
+						$prev_post = new WP_Query($args_prev);
+						
+						if ($prev_post->have_posts()) :
+							while ($prev_post->have_posts()) : $prev_post->the_post(); ?>
+								<a href="<?php the_permalink(); ?>" class="prev-post-button"><i class="fa-solid fa-arrow-left"></i> <?php if(get_field( 'titre' )){the_field('titre');} ?></a>
+							<?php endwhile;
+							wp_reset_postdata();
+						endif;
+						
+						// Requête pour l'entrée suivante (num_toile plus élevé)
+						$args_next = array(
+							'post_type' => 'toile',
+							'posts_per_page' => 1,
+							'meta_key' => 'num_toile',
+							'orderby' => 'meta_value_num',
+							'order' => 'ASC',
+							'meta_query' => array(
+								array(
+									'key' => 'num_toile',
+									'value' => $current_num_toile,
+									'compare' => '>',
+									'type' => 'NUMERIC'
+								)
+							)
+						);
+						
+						$next_post = new WP_Query($args_next);
+						
+						if ($next_post->have_posts()) :
+							while ($next_post->have_posts()) : $next_post->the_post(); ?>
+								<a href="<?php the_permalink(); ?>" class="prev-post-button"><?php if(get_field( 'titre' )){the_field('titre');} ?> <i class="fa-solid fa-arrow-right"></i></a>
+							<?php endwhile;
+							wp_reset_postdata();
+						endif;
+						
+						
+						?>
 				</div>
 
 
@@ -124,13 +86,14 @@ if ( has_post_thumbnail() ) {
 						<td><?php if(get_field( 'titre' )){the_field('titre');} ?></td>
 					</tr>
 					<tr>
-						<td class="libelle">Numéro de toile</td>
-						<td><?php if(get_field( 'num_toile' )){the_field('num_toile');} ?></td>
-					</tr>
-					<tr>
 						<td class="libelle">Année</td>
 						<td><?php if(get_field( 'annee' )){the_field('annee');} ?></td>
 					</tr>
+					<tr>
+						<td class="libelle">Numéro de toile</td>
+						<td><?php if(get_field( 'num_toile' )){the_field('num_toile');} ?></td>
+					</tr>
+					
 					<tr>
 						<td class="libelle">Dimensions</td>
 						<td><?php if(get_field( 'dimensions' )){echo str_replace('X',' x ',get_field('dimensions'));} ?></td>
