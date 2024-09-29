@@ -216,6 +216,11 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 .single-toile #site-content .toile-container .toile-notice {
   padding: 0 40px;
 }
+.single-toile #site-content .toile-container .toile-notice h1 {
+  padding: 40px 0;
+  margin: 0;
+  font-size: 6.4rem;
+}
 .single-toile #site-content .toile-container .toile-notice table {
   margin: 4rem 0;
   width: -moz-fit-content;
@@ -405,13 +410,13 @@ body .happyfiles-gallery {
 
 /* Les critères */
 .critere {
-  border-right: 1px solid #222222;
-  padding: 20px;
   font-size: 16px;
   position: relative;
 }
-.critere .wp-block-group:not(.has-background):not(.alignwide):not(.alignfull) {
-  margin: 1rem 0 1rem 0 !important;
+.critere .sticky {
+  margin: 0;
+  padding: 20px;
+  border-right: 1px solid #222222;
 }
 .critere p {
   font-weight: 700;
