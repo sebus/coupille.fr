@@ -1,93 +1,88 @@
 @use "global" as g;
 
 /* Les critères */
-.critere{
-
-  
-
-    .sticky{
-      margin:0;
-      padding: g.$space_s;
-      border-right: 1px solid g.$col_black;
-    }
-
-    font-size: 16px;
-    // border: 1px solid green;
-    position: relative;  
-
-    p{
-      font-weight: 700;
-      //border-top: 1px solid g.$col_gray;
-      border-bottom: none;
-      padding-top: g.$space_s;
-      margin-bottom: g.$space_xs;
-    }
-  
-    .facetwp-facet {
-      margin-bottom: g.$space_s;
-      padding: 0;
-    
-    
-    }
-    .facetwp-hidden,
-    .facetwp-autocomplete-update,
-    .facetwp-slider-reset{
-      display: none !important;
-    }
-
-    .wp-block-group:first-child{
-      margin-top: 0 !important;
-    }
- 
-  }
-  
-  /* Pagination */
-  .pager{
-    padding: 0 !important;
-  
-    .facetwp-facet{
-      padding: g.$space_xs g.$space_s;
-    }
+.critere {
+  .sticky {
+    margin: 0;
+    padding: g.$space_s;
+    border-right: 1px solid g.$col_black;
   }
 
-  .facetwp-facet-pagination_1 {
+  font-size: 16px;
+  // border: 1px solid green;
+  position: relative;
 
-    margin-top: g.$space_m;
-    //border-top: 1px solid g.$col_black;
-    padding-top: g.$space_m;
+  p {
+    font-weight: 700;
+    //border-top: 1px solid g.$col_gray;
+    border-bottom: none;
+    padding-top: g.$space_s;
+    margin-bottom: g.$space_xs;
+  }
 
-    .facetwp-pager{
-      margin: 0 auto;
-      width: fit-content;
+  select {
+    padding: 8px 16px 8px 8px;
+  }
 
-      a{
-        font-size: 16px;
-        text-decoration: none;
+  .facetwp-facet {
+    margin-bottom: g.$space_s;
+    padding: 0;
+  }
+  .facetwp-hidden,
+  .facetwp-autocomplete-update,
+  .facetwp-slider-reset {
+    display: none !important;
+  }
 
-        &:hover{
-          text-decoration: underline;
-        }
-      }
+  .wp-block-group:first-child {
+    margin-top: 0 !important;
+  }
+}
 
-      a.active{
-        border: 1px solid g.$col_black;
-        border-radius: 15PX;
-        padding: 5px 10px;
+/* Pagination */
+.pager {
+  padding: 0 !important;
+
+  .facetwp-facet {
+    padding: g.$space_xs g.$space_s;
+  }
+}
+
+.facetwp-facet-pagination_1 {
+  margin-top: g.$space_m;
+  //border-top: 1px solid g.$col_black;
+  padding-top: g.$space_m;
+
+  .facetwp-pager {
+    margin: 0 auto;
+    width: fit-content;
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
 
-  }
-
-
-  /* Taille des images dans la gallerie */
-
-  .fwpl-item.el-gwc0j{
-    background-color: g.$col_gray_dark;
-    a img{
-      display: block;
-      height: auto;
-      max-width: 100%;
-      max-height: 600px;
-      width: auto;
+    a.active {
+      border: 1px solid g.$col_black;
+      border-radius: 15px;
+      padding: 5px 10px;
     }
-  } 
+  }
+}
+
+/* Taille des images dans la gallerie */
+
+.fwpl-item.el-gwc0j {
+  background-color: g.$col_gray_dark;
+  a img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+  }
+}

@@ -116,8 +116,8 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 .navPost .prev-post-button,
 .navPost .next-post-button {
   display: inline-block;
-  padding: 15px 30px;
-  background-color: #222222;
+  padding: 4px 8px;
+  background-color: #585858;
   color: #f2f2f2;
   width: -moz-fit-content;
   width: fit-content;
@@ -229,9 +229,6 @@ legend {
 .entry-content .wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter) {
   margin-top: 0;
 }
-.home .entry-content {
-  min-height: 100vh;
-}
 
 body:not(.overlay-header) .toggle-inner .toggle-text {
   display: none;
@@ -252,9 +249,8 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
   padding: 0 40px;
 }
 .single-toile #site-content .toile-container .toile-notice h1 {
-  padding: 40px 0;
-  margin: 0;
-  font-size: 6.4rem;
+  margin: 40px 0;
+  font-size: 4rem;
 }
 .single-toile #site-content .toile-container .toile-notice table {
   margin: 4rem 0;
@@ -461,6 +457,9 @@ body .happyfiles-gallery {
   padding-top: 20px;
   margin-bottom: 10px;
 }
+.critere select {
+  padding: 8px 16px 8px 8px;
+}
 .critere .facetwp-facet {
   margin-bottom: 20px;
   padding: 0;
@@ -500,7 +499,7 @@ body .happyfiles-gallery {
 }
 .facetwp-facet-pagination_1 .facetwp-pager a.active {
   border: 1px solid #222222;
-  border-radius: 15PX;
+  border-radius: 15px;
   padding: 5px 10px;
 }
 
