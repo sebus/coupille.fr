@@ -514,14 +514,34 @@ body .happyfiles-gallery {
   width: auto;
 }
 
-body .gform_wrapper.gravity-theme .gfield_label, body label {
+body .abonnement {
+  padding: 24px;
+  background-color: white;
+}
+body .gform_wrapper.gravity-theme .gfield_label,
+body label {
   letter-spacing: normal;
   line-height: normal;
   font-size: 21px;
   font-weight: 400;
   margin: 0 0 0.5rem 0;
 }
-body .gform_wrapper.gravity-theme input[type=color], body .gform_wrapper.gravity-theme input[type=date], body .gform_wrapper.gravity-theme input[type=datetime-local], body .gform_wrapper.gravity-theme input[type=datetime], body .gform_wrapper.gravity-theme input[type=email], body .gform_wrapper.gravity-theme input[type=month], body .gform_wrapper.gravity-theme input[type=number], body .gform_wrapper.gravity-theme input[type=password], body .gform_wrapper.gravity-theme input[type=search], body .gform_wrapper.gravity-theme input[type=tel], body .gform_wrapper.gravity-theme input[type=text], body .gform_wrapper.gravity-theme input[type=time], body .gform_wrapper.gravity-theme input[type=url], body .gform_wrapper.gravity-theme input[type=week], body .gform_wrapper.gravity-theme select, body .gform_wrapper.gravity-theme textarea {
+body .gform_wrapper.gravity-theme input[type=color],
+body .gform_wrapper.gravity-theme input[type=date],
+body .gform_wrapper.gravity-theme input[type=datetime-local],
+body .gform_wrapper.gravity-theme input[type=datetime],
+body .gform_wrapper.gravity-theme input[type=email],
+body .gform_wrapper.gravity-theme input[type=month],
+body .gform_wrapper.gravity-theme input[type=number],
+body .gform_wrapper.gravity-theme input[type=password],
+body .gform_wrapper.gravity-theme input[type=search],
+body .gform_wrapper.gravity-theme input[type=tel],
+body .gform_wrapper.gravity-theme input[type=text],
+body .gform_wrapper.gravity-theme input[type=time],
+body .gform_wrapper.gravity-theme input[type=url],
+body .gform_wrapper.gravity-theme input[type=week],
+body .gform_wrapper.gravity-theme select,
+body .gform_wrapper.gravity-theme textarea {
   -moz-appearance: none;
   background: #fff;
   border-radius: 0;
@@ -536,7 +556,27 @@ body .gform_wrapper.gravity-theme input[type=color], body .gform_wrapper.gravity
   padding: 1.5rem 1.8rem !important;
   width: 100%;
 }
-body .gform_wrapper input[type=date], body .gform_wrapper input[type=email], body .gform_wrapper input[type=password], body .gform_wrapper input[type=search], body .gform_wrapper input[type=text], body .gform_wrapper input[type=url], body .gform_wrapper textarea, body .facetwp-facet input[type=date], body .facetwp-facet input[type=email], body .facetwp-facet input[type=password], body .facetwp-facet input[type=search], body .facetwp-facet input[type=text], body .facetwp-facet input[type=url], body .facetwp-facet textarea, body .search-form input[type=date], body .search-form input[type=email], body .search-form input[type=password], body .search-form input[type=search], body .search-form input[type=text], body .search-form input[type=url], body .search-form textarea {
+body .gform_wrapper input[type=date],
+body .gform_wrapper input[type=email],
+body .gform_wrapper input[type=password],
+body .gform_wrapper input[type=search],
+body .gform_wrapper input[type=text],
+body .gform_wrapper input[type=url],
+body .gform_wrapper textarea,
+body .facetwp-facet input[type=date],
+body .facetwp-facet input[type=email],
+body .facetwp-facet input[type=password],
+body .facetwp-facet input[type=search],
+body .facetwp-facet input[type=text],
+body .facetwp-facet input[type=url],
+body .facetwp-facet textarea,
+body .search-form input[type=date],
+body .search-form input[type=email],
+body .search-form input[type=password],
+body .search-form input[type=search],
+body .search-form input[type=text],
+body .search-form input[type=url],
+body .search-form textarea {
   background-color: #fff;
   border-radius: 0.5rem;
   border: 1px solid #d1d1d1;
@@ -593,7 +633,19 @@ body .gravity-theme .gform_footer input {
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
 }
-body button, body .button, body .faux-button, body .wp-block-button__link, body .wp-block-file .wp-block-file__button, body input[type=button], body input[type=reset], body input[type=submit], body .bg-accent, body .bg-accent-hover:hover, body .bg-accent-hover:focus, body :root .has-accent-background-color, body .comment-reply-link {
+body button,
+body .button,
+body .faux-button,
+body .wp-block-button__link,
+body .wp-block-file .wp-block-file__button,
+body input[type=button],
+body input[type=reset],
+body input[type=submit],
+body .bg-accent,
+body .bg-accent-hover:hover,
+body .bg-accent-hover:focus,
+body :root .has-accent-background-color,
+body .comment-reply-link {
   padding: 15px 30px;
   border-radius: 0px;
   background-color: #222222;
@@ -606,14 +658,16 @@ body button, body .button, body .faux-button, body .wp-block-button__link, body 
   -o-border-radius: 0px;
   box-shadow: none;
 }
-body input.facetwp-slider-reset, body input[type=button] {
+body input.facetwp-slider-reset,
+body input[type=button] {
   margin-top: 20px;
   background-color: #222222 !important;
   font-size: 14px;
   padding: 8px 16px;
 }
 
-body.home .gform_wrapper.gravity-theme .gfield_label, body.home label {
+body.home .gform_wrapper.gravity-theme .gfield_label,
+body.home label {
   letter-spacing: normal;
   line-height: normal;
   font-size: 21px;
