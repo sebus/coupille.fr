@@ -1,10 +1,11 @@
 @use "global" as g;
 
 /* Menu mobile */
-body .menu-modal-inner{
+body .menu-modal-inner {
   background-color: g.$col_black;
 
-  a,button span{
+  a,
+  button span {
     color: white;
     text-decoration: none;
   }
@@ -12,84 +13,81 @@ body .menu-modal-inner{
 .menu-modal .toggle {
   color: white;
 }
-.modal-menu li{
+.modal-menu li {
   border: none;
 }
 
-
-
 /* Un peu de responsive pour les grilles */
 
-@media (max-width: 1440px){
-  #site-content  .fwpl-layout.el-xqzw08 {
+@media (max-width: 1440px) {
+  #site-content .fwpl-layout.el-xqzw08 {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
 }
 
-@media (max-width: 1280px){
-    #site-content  .fwpl-layout.el-xqzw08 {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px;
+@media (max-width: 1280px) {
+  #site-content .fwpl-layout.el-xqzw08 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .page-id-71 {
+    .facet_grid {
+      gap: 2rem;
     }
-    .page-id-71{
-      .facet_grid{
-        gap: 2rem;
-      }
-      .critere{
-        flex-basis:25% !important;
-      }
-      .vue{
-        flex-basis:75% !important;
-      }
+    .critere {
+      flex-basis: 25% !important;
     }
-    .menu-wrapper.section-inner{
-        width: 100vw;
+    .vue {
+      flex-basis: 75% !important;
     }
-    button.close-nav-toggle{
-        padding: 3.1rem 1rem;
+  }
+  .menu-wrapper.section-inner {
+    width: 100vw;
+  }
+  button.close-nav-toggle {
+    padding: 3.1rem 1rem;
+  }
+
+  .primary-menu li {
+    font-size: 16px;
+  }
+
+  #site-footer {
+    margin-top: 5rem;
+  }
+
+  .single-toile #site-content .toile-container {
+    grid-template-columns: 1fr;
+
+    .toile-notice {
+      order: 2;
     }
 
-    .primary-menu li{
-      font-size: 16px;
+    .featured-media {
+      padding: 0;
+      margin-bottom: 5rem;
     }
-
-    #site-footer{
-      margin-top: 5rem;
-    }
-
-    .single-toile #site-content .toile-container {
-      grid-template-columns: 1fr;
-      
-        .toile-notice{
-          order: 2;
-        }
-        
-        .featured-media{
-          padding: 0;
-          margin-bottom: 5rem;
-        }
   }
 }
 
-@media (max-width: 500px){
-  #site-content  .fwpl-layout.el-xqzw08 {
+@media (max-width: 500px) {
+  #site-content .fwpl-layout.el-xqzw08 {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
   }
 
   [data-name="journal"] {
-      h2 {
+    h2 {
       font-size: 2.6rem;
     }
-    p{
+    p {
       font-size: 16px;
     }
   }
-
 }
 
-@media (min-width: 700px){
+@media (min-width: 700px) {
   .site-logo img {
     max-height: 4rem;
   }
@@ -97,50 +95,72 @@ body .menu-modal-inner{
   .singular .entry-header {
     padding: 6rem 0 0 0;
   }
-  
+
   .footer-widgets-outer-wrapper {
-      padding: 2rem 0;
+    padding: 2rem 0;
   }
 
-  .modal-menu > li > a, .modal-menu > li > .ancestor-wrapper > a {
+  .modal-menu > li > a,
+  .modal-menu > li > .ancestor-wrapper > a {
     font-size: 2.4rem;
     padding: 2.5rem 2rem;
   }
-
 }
-  
-@media (min-width: 1220px){
-    
-    .footer-widgets-outer-wrapper{
-      max-width: 50vw;
-    }
-}
-  
-@media (min-width: 1000px){
 
-  .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
-    margin-bottom: 4rem  !important;
-    margin-top: 0  !important;
+@media (min-width: 1220px) {
+  .footer-widgets-outer-wrapper {
+    max-width: 50vw;
   }
-  .wp-block-columns:first-child{
+}
+
+@media (min-width: 1000px) {
+  .entry-content > .alignwide:not(.wp-block-group.has-background),
+  .entry-content > .alignfull:not(.wp-block-group.has-background) {
+    margin-bottom: 4rem !important;
+    margin-top: 0 !important;
+  }
+  .wp-block-columns:first-child {
     margin-top: 0rem !important;
   }
-
 }
 
-@media (max-width: 1000px){
-
+@media (max-width: 1000px) {
   // Accueil
-  .cover-header-inner-wrapper{
+  .cover-header-inner-wrapper {
     align-items: center;
     justify-content: center;
   }
-  .homeIntro{
+  .homeIntro {
     padding: 2rem;
-    margin:5rem 0 !important;
+    margin: 5rem 0 !important;
   }
-  .alignfull:not(.has-background) > .wp-block-group__inner-container > p:not(.has-background-color){
+  .alignfull:not(.has-background)
+    > .wp-block-group__inner-container
+    > p:not(.has-background-color) {
     padding: 0;
   }
+  [data-name="journal"] {
+    h2,
+    p {
+      font-size: 2.1rem;
+    }
+  }
+  // Adatpation catalogue
+  .page-id-71 {
+    .entry-content {
+      padding-top: 0;
+    }
 
+    .facet_grid {
+      flex-direction: column;
+      margin-top: 0 !important;
+    }
+    [class*="__inner-container"]
+      > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(
+        .is-style-wide
+      ) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 }

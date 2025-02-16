@@ -343,7 +343,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 .post-template,
 .single-toile {
   h1.entry-title {
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -381,7 +381,6 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
   background-color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 30px;
 
   font-size: inherit;
   color: $col_black;

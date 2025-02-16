@@ -290,7 +290,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 /* Article de blog + toile */
 .post-template h1.entry-title,
 .single-toile h1.entry-title {
-  margin-bottom: 8rem;
+  margin-bottom: 1rem;
 }
 
 /* Biographie */
@@ -320,7 +320,6 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
   background-color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 30px;
   font-size: inherit;
   color: #222222;
 }
@@ -650,7 +649,8 @@ p.form-submit input[type=submit] {
 body .menu-modal-inner {
   background-color: #222222;
 }
-body .menu-modal-inner a, body .menu-modal-inner button span {
+body .menu-modal-inner a,
+body .menu-modal-inner button span {
   color: white;
   text-decoration: none;
 }
@@ -729,7 +729,8 @@ body .menu-modal-inner a, body .menu-modal-inner button span {
   .footer-widgets-outer-wrapper {
     padding: 2rem 0;
   }
-  .modal-menu > li > a, .modal-menu > li > .ancestor-wrapper > a {
+  .modal-menu > li > a,
+  .modal-menu > li > .ancestor-wrapper > a {
     font-size: 2.4rem;
     padding: 2.5rem 2rem;
   }
@@ -740,7 +741,8 @@ body .menu-modal-inner a, body .menu-modal-inner button span {
   }
 }
 @media (min-width: 1000px) {
-  .entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
+  .entry-content > .alignwide:not(.wp-block-group.has-background),
+  .entry-content > .alignfull:not(.wp-block-group.has-background) {
     margin-bottom: 4rem !important;
     margin-top: 0 !important;
   }
@@ -759,5 +761,20 @@ body .menu-modal-inner a, body .menu-modal-inner button span {
   }
   .alignfull:not(.has-background) > .wp-block-group__inner-container > p:not(.has-background-color) {
     padding: 0;
+  }
+  [data-name=journal] h2,
+  [data-name=journal] p {
+    font-size: 2.1rem;
+  }
+  .page-id-71 .entry-content {
+    padding-top: 0;
+  }
+  .page-id-71 .facet_grid {
+    flex-direction: column;
+    margin-top: 0 !important;
+  }
+  .page-id-71 [class*=__inner-container] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 100%;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
